@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Clean admin neutral palette */
+    --background: 0 0% 100%;
+    --foreground: 222 22% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 22% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 22% 18%;
+
+    /* Primary = navy used sparingly */
+    --primary: 215 60% 24%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Accent = brand indigo #5353EE (links, actions) */
+    --accent: 243 82% 63%;
+    --accent-foreground: 0 0% 100%;
+
+    --brand-cyan: 243 82% 63%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 22% 18%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 55% 38%;
+    --warning: 38 92% 48%;
+    --info: 243 82% 63%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 243 82% 63%;
+
+    --radius: 0.5rem;
+
+    /* Kept for compatibility but flattened */
+    --gradient-brand: hsl(243 82% 63%);
+    --gradient-hero: none;
+    --gradient-card: hsl(0 0% 100%);
+    --gradient-navy: hsl(215 60% 24%);
+
+    --shadow-xs: 0 1px 2px hsl(220 30% 15% / 0.04);
+    --shadow-sm: 0 1px 2px hsl(220 30% 15% / 0.05);
+    --shadow-md: 0 2px 6px hsl(220 30% 15% / 0.06);
+    --shadow-lg: 0 4px 12px hsl(220 30% 15% / 0.08);
+    --shadow-glow: 0 1px 2px hsl(220 30% 15% / 0.05);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 22% 18%;
+    --sidebar-primary: 243 82% 63%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 22% 18%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 243 82% 63%;
+  }
+
+  .dark {
+    --background: 222 22% 10%;
+    --foreground: 210 20% 96%;
+    --card: 222 22% 12%;
+    --card-foreground: 210 20% 96%;
+    --popover: 222 22% 12%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 243 82% 68%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 243 82% 68%;
+    --accent-foreground: 0 0% 100%;
+    --secondary: 222 18% 16%;
+    --secondary-foreground: 210 20% 96%;
+    --muted: 222 18% 16%;
+    --muted-foreground: 220 10% 65%;
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 15% 20%;
+    --input: 222 15% 20%;
+    --ring: 243 82% 68%;
+    --sidebar-background: 222 22% 10%;
+    --sidebar-foreground: 210 20% 96%;
+    --sidebar-primary: 243 82% 68%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 18% 16%;
+    --sidebar-accent-foreground: 210 20% 96%;
+    --sidebar-border: 222 15% 20%;
+    --sidebar-ring: 243 82% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: "Epilogue", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Urbanist", system-ui, sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
